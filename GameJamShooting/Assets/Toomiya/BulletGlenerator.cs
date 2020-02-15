@@ -7,11 +7,13 @@ public class BulletGlenerator : MonoBehaviour
 
     public GameObject Bullet;
     public GameObject Player;
-    
+
     // Start is called before the first frame update
     void Start()
     {
+        StartCoroutine(Shot());
     }
+
 
     // Update is called once per frame
     void Update()
@@ -22,8 +24,16 @@ public class BulletGlenerator : MonoBehaviour
         //Debug.Log("bb");//確認用
         if (Rx != 0 || Ry != 0)
         {
-            GameObject bullet = Instantiate(Bullet,Player.transform.position,Quaternion.identity);
+            GameObject bullet = Instantiate(Bullet, Player.transform.position, Quaternion.identity);
             bullet.GetComponent<BulletControl>().SetMoveDir(new Vector3(Rx, Ry, 0));
+        }
+    }
+
+    IEnumerator Shot()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(0.5f);
         }
     }
 }
