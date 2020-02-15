@@ -5,7 +5,8 @@ using UnityEngine;
 public class PlayerControl : MonoBehaviour
 {
 
-    public const float PlayerSpeed = 1.0f; //playerのスピード
+     public float PlayerSpeed = 1.0f; //playerのスピード
+
 
 
     // Start is called before the first frame update
@@ -39,5 +40,8 @@ public class PlayerControl : MonoBehaviour
         {
             transform.Translate(0, -PlayerSpeed, 0);
         }
+
+
+
     }
 }
