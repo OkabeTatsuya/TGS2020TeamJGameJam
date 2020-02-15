@@ -216,8 +216,8 @@ GameObject:
   - component: {fileID: 1155879559}
   - component: {fileID: 1155879562}
   m_Layer: 0
-  m_Name: Barrett
-  m_TagString: Barrett
+  m_Name: Bullet
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -353,6 +353,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BombPrefab: {fileID: 8705196192300895398, guid: 07af97c4869d17240ac2942c57036328,
     type: 3}
+  m_startCreateCount: 5
+  m_maxCreateCount: 100
+  minInterval: 2
+  interval: 5
+  minusInterval: 0.2
+  currentIntervalTime: 0
+  xMinPosition: -5
+  xMaxPosition: 5
+  yMinPosition: -5
+  yMaxPosition: 5
 --- !u!4 &2066948754
 Transform:
   m_ObjectHideFlags: 0

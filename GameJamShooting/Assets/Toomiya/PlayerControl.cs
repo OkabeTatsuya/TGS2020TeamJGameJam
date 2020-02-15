@@ -23,8 +23,6 @@ public class PlayerControl : MonoBehaviour
         transform.Translate(PlayerSpeed * x, PlayerSpeed * y, 0);
 
 
-
-
         ////左スティク 右の処理
         //if (Input.GetAxis("Horizontal") > 0)
         //{
@@ -48,9 +46,6 @@ public class PlayerControl : MonoBehaviour
         //{
         //    transform.Translate(0, -PlayerSpeed, 0);
         //}
-
-
-
 
 
     }

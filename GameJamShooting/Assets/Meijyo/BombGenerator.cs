@@ -4,44 +4,52 @@ using UnityEngine;
 
 public class BombGenerator : MonoBehaviour
 {
-    public GameObject BombPrefab;
+    [SerializeField] GameObject BombPrefab;
+    [SerializeField] int m_startCreateCount;
+    [SerializeField] int m_maxCreateCount;
+    [SerializeField] float minInterval;
+    [SerializeField] float interval;
+    [SerializeField] float minusInterval;
+    [SerializeField] float xMinPosition;
+    [SerializeField] float xMaxPosition;                           
+    [SerializeField] float yMinPosition;
+    [SerializeField] float yMaxPosition;
+    int m_currentCreateCount;
+    float currentIntervalTime;
 
-    public float minTime = 0.5f;
 
-    public float maxTime = 2f;
-
-    public float xMinPosition = 0f;
-
-    public float xMaxPosition = 0f;
-
-    public float yMinPosition = 0f;
-
-    public float yMaxPosition = 0f;
-
-    private float interval;
-
-    private float time = 0f;
 
     void Start()
     {
-        interval = 5f;
-
-        interval = GetRandomTime();
+        for (int i = 0; i < m_startCreateCount; i++)
+        {
+            Instantiate(BombPrefab, GetRandomPosition(), Quaternion.identity);
+            m_currentCreateCount++;
+        }
     }
 
     void Update()
     {
-        time += Time.deltaTime;
-
-        if(time > interval)
+        if (m_currentCreateCount < m_maxCreateCount)
         {
-            if (interval > minTime)
+            currentIntervalTime += Time.deltaTime;
+
+            if (currentIntervalTime >= interval)
             {
-                GameObject Bomb = Instantiate(BombPrefab);
 
-                Bomb.transform.position = GetRandomPosition();
+                Instantiate(BombPrefab, GetRandomPosition(), Quaternion.identity);
 
-                time = 0f;
+                m_currentCreateCount++;
+
+                currentIntervalTime = 0f;
+
+                interval -= minusInterval;
+
+            }
+
+            if (interval <= minInterval)
+            {
+                interval = minInterval;
             }
         }
     }
@@ -53,8 +61,9 @@ public class BombGenerator : MonoBehaviour
         return new Vector3(x,y);
     }
 
-    private float GetRandomTime()
+    public void MinusCurrentCreateCount()
     {
-        return Random.Range(minTime, maxTime);
+        m_currentCreateCount --;
     }
+
 }
