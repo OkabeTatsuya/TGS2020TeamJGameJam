@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class CountDownController : MonoBehaviour
 {
-    //表示するUIのキャンバス
-    public GameObject m_CountDownCanvas;
     //キャンバスの中のImage
     public GameObject[] m_Images;
     //現在のカウントダウンの時間
@@ -19,9 +17,9 @@ public class CountDownController : MonoBehaviour
     {
         //キャンバスの中のImageを格納、かつ表示しないもののActiveをfalseに
         m_Images = new GameObject[6];
-        for (int i = 0; i < m_CountDownCanvas.transform.childCount; i++)
+        for (int i = 0; i < transform.childCount; i++)
         {
-            m_Images[i] = m_CountDownCanvas.transform.GetChild(i).gameObject;
+            m_Images[i] = transform.GetChild(i).gameObject;
             if (i > 0)
             {
                 m_Images[i].SetActive(false);
@@ -38,7 +36,7 @@ public class CountDownController : MonoBehaviour
             if (m_CurrentCountDownTime >= 5)
             {
                 m_currentStartDisplayTime += Time.deltaTime;
-                for (int i = 0; i < m_CountDownCanvas.transform.childCount; i++)
+                for (int i = 0; i < transform.childCount; i++)
                 {
                     if (i != 5)
                     {
@@ -51,12 +49,12 @@ public class CountDownController : MonoBehaviour
                 }
                 if (m_currentStartDisplayTime >= m_startDisplayTime)
                 {
-                    Destroy(m_CountDownCanvas);
+                    Destroy(gameObject);
                 }
             }
             else if (m_CurrentCountDownTime >= 4)
             {
-                for (int i = 0; i < m_CountDownCanvas.transform.childCount; i++)
+                for (int i = 0; i < transform.childCount; i++)
                 {
                     if (i != 4)
                     {
@@ -70,7 +68,7 @@ public class CountDownController : MonoBehaviour
             }
             else if (m_CurrentCountDownTime >= 3)
             {
-                for (int i = 0; i < m_CountDownCanvas.transform.childCount; i++)
+                for (int i = 0; i < transform.childCount; i++)
                 {
                     if (i != 3)
                     {
@@ -84,7 +82,7 @@ public class CountDownController : MonoBehaviour
             }
             else if (m_CurrentCountDownTime >= 2)
             {
-                for (int i = 0; i < m_CountDownCanvas.transform.childCount; i++)
+                for (int i = 0; i < transform.childCount; i++)
                 {
                     if (i != 2)
                     {
@@ -98,7 +96,7 @@ public class CountDownController : MonoBehaviour
             }
             else if (m_CurrentCountDownTime >= 1)
             {
-                for (int i = 0; i < m_CountDownCanvas.transform.childCount; i++)
+                for (int i = 0; i < transform.childCount; i++)
                 {
                     if (i != 1)
                     {
@@ -112,7 +110,7 @@ public class CountDownController : MonoBehaviour
             }
             else if (m_CurrentCountDownTime >= 0)
             {
-                for (int i = 0; i < m_CountDownCanvas.transform.childCount; i++)
+                for (int i = 0; i < transform.childCount; i++)
                 {
                     if (i != 0)
                     {
