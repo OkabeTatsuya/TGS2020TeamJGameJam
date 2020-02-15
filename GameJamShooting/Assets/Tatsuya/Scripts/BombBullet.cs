@@ -32,7 +32,7 @@ public class BombBullet : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         //壁にぶつかった時の反射処理
         if (collision.gameObject.tag == "Wall")
