@@ -6,7 +6,6 @@ TagManager:
   tags:
   - Wall
   - Bomb
-  - BombBullet
   - Bullet
   layers:
   - Default
