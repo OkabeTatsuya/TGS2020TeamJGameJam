@@ -4,12 +4,18 @@ using UnityEngine;
 
 public class BulletControl : MonoBehaviour
 {
-    float BulletSpeed = 1.0f;
+    public float BulletSpeed = 1.0f;
+
+
+    public GameObject Bullet;
+
+
     Vector3 moveDir;
 
     private void Awake()
     {
     }
+
 
     // Update is called once per frame
     void Update()
@@ -22,6 +28,6 @@ public class BulletControl : MonoBehaviour
     public void SetMoveDir(Vector3 RStickDir)
     {
         moveDir = RStickDir.normalized;
-    }
 
+    }
 }
