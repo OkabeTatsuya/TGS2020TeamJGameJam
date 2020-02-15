@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletControt: MonoBehaviour
+public class BulletControl : MonoBehaviour
 {
-    float BulletSpeed = 2.0f;
+    float BulletSpeed = 1.0f;
     Vector3 moveDir;
 
     private void Awake()

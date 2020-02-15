@@ -19,10 +19,11 @@ public class BulletGlenerator : MonoBehaviour
         //右スティック 弾の処理
         float Rx = Input.GetAxis("RHorizontal");
         float Ry = -Input.GetAxis("RVertical");
+        //Debug.Log("bb");//確認用
         if (Rx != 0 || Ry != 0)
         {
             GameObject bullet = Instantiate(Bullet,Player.transform.position,Quaternion.identity);
-            bullet.GetComponent<BulletControt>().SetMoveDir(new Vector3(Rx, Ry, 0));
+            bullet.GetComponent<BulletControl>().SetMoveDir(new Vector3(Rx, Ry, 0));
         }
     }
 }
