@@ -22,6 +22,7 @@ public class BulletControl : MonoBehaviour
     public void SetMoveDir(Vector3 RStickDir)
     {
         moveDir = RStickDir.normalized;
+        transform.up = moveDir;
     }
 
 }
