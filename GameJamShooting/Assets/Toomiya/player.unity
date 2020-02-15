@@ -248,6 +248,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Bullet: {fileID: 6686601822313779866, guid: c9da0d288cc54484287075f9b10735ba, type: 3}
   Player: {fileID: 1393048514}
+  m_generateCoolTime: 0.05
+  m_generateDistance: 0
 --- !u!1 &1393048514
 GameObject:
   m_ObjectHideFlags: 0
@@ -318,12 +320,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 38d069217a716464b92185010effadf6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1d29b68e27a993a4ebebd48a2e9aa294, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 5.13, y: 5.13}
+  m_Size: {x: 5.12, y: 5.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

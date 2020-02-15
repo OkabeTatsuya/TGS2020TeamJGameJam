@@ -25,7 +25,7 @@ public class PlayerGenerator : MonoBehaviour
             {
                 var player = Instantiate(m_player[i]);
                 player.transform.position = m_startPos[i];
-                //player.GetComponent<PlayerControl>().playerID = TitleManager.m_playerPadID[i];
+                player.GetComponent<PlayerControl>().playerID = TitleManager.m_playerPadID[i];
             }
         }
     }
