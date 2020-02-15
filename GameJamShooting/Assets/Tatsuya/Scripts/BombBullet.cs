@@ -7,7 +7,7 @@ public class BombBullet : MonoBehaviour
     //弾の移動方向のベクトル
     private Vector2 m_movedir;
     //弾の移動速度
-    private float m_moveSpeed = 3.0f;
+    public float m_moveSpeed = 3.0f;
     //消える時間の上限
     private float m_DestroyTime = 2.0f;
     //生成されてからの現在の経過時間
