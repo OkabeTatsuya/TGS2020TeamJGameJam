@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class BombGenerator : MonoBehaviour
 {
-    [SerializeField] GameObject BombPrefab;
-    [SerializeField] int m_startCreateCount;
-    [SerializeField] int m_maxCreateCount;
-    [SerializeField] float minInterval;
-    [SerializeField] float interval;
-    [SerializeField] float minusInterval;
-    [SerializeField] float xMinPosition;
-    [SerializeField] float xMaxPosition;                           
-    [SerializeField] float yMinPosition;
-    [SerializeField] float yMaxPosition;
+    public GameObject BombPrefab;
+    public int m_startCreateCount;
+    public int m_maxCreateCount;
+    public float minInterval;
+    public float interval;
+    public float minusInterval;
+    public float xMinPosition;
+    public float xMaxPosition;                           
+    public float yMinPosition;
+    public float yMaxPosition;
     int m_currentCreateCount;
     float currentIntervalTime;
 
