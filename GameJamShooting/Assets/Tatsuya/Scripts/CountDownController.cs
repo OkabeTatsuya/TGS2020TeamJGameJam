@@ -49,6 +49,7 @@ public class CountDownController : MonoBehaviour
                 }
                 if (m_currentStartDisplayTime >= m_startDisplayTime)
                 {
+                    GameManager.Instance.m_gameStop = false;
                     Destroy(gameObject);
                 }
             }

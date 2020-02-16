@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class TitleManager : MonoBehaviour
 {
@@ -40,7 +42,7 @@ public class TitleManager : MonoBehaviour
             {
                 if (Input.GetButtonDown("GamePad" + m_playerPadID[0] + "_ButtonView") && m_countID >= m_mimPlayers)
                 {
-                    Debug.Log("スタート");
+                    SceneManager.LoadScene("GameScene");
                 }
             }
         }

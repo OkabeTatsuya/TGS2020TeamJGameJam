@@ -20,7 +20,7 @@ public class BombController: MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Bullet")
+        if (collision.gameObject.tag == "PlayerBullet" || collision.gameObject.tag == "EnemyBullet")
         {
             GameObject.Find("BombGenerator").GetComponent<BombGenerator>().MinusCurrentCreateCount();
             Destroy(gameObject);

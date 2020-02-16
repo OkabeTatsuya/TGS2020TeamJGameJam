@@ -9,6 +9,8 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     public bool m_gameEnd = true;
     public int m_winerPlayerID = 0;
 
+    public WinUIController WinerUI;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +29,11 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
             {
                 
             }
+        }
+
+        if (m_gameEnd)
+        {
+            WinerUI.DrawUI(m_winerPlayerID);
         }
 
         if (m_gameEnd && Input.GetButtonDown("GamePad" + 1 + "_ButtonView"))
