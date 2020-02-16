@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BulletControl : MonoBehaviour
 {
-    float BulletSpeed = 1.0f;
+    float BulletSpeed = 30.0f;
     Vector3 moveDir;
 
     private void Awake()
@@ -15,13 +15,14 @@ public class BulletControl : MonoBehaviour
     void Update()
     {
 
-        transform.Translate(moveDir*BulletSpeed);
+        transform.position += moveDir * Time.deltaTime * BulletSpeed;
 
     }
 
     public void SetMoveDir(Vector3 RStickDir)
     {
         moveDir = RStickDir.normalized;
+        transform.up = moveDir.normalized;
     }
 
 }
