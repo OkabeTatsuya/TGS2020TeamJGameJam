@@ -7,6 +7,9 @@ TagManager:
   - Wall
   - Bomb
   - Bullet
+  - Bom
+  - PlayerBullet
+  - EnemyBullet
   layers:
   - Default
   - TransparentFX
