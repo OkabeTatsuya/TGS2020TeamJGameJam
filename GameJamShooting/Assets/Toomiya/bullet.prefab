@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -1818742139435081636}
   m_Layer: 0
   m_Name: bullet
-  m_TagString: Bullet
+  m_TagString: PlayerBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -109,4 +109,4 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 2.565
+  m_Radius: 2
